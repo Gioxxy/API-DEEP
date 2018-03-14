@@ -1,0 +1,27 @@
+{
+  "name": "api",
+  "version": "8.10.0",
+  "description": "null",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "null"
+  },
+  "keywords": [
+    "null"
+  ],
+  "author": "null",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.17.2"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.16.3",
+    "requestretry": "^1.13.0"
+  }
+}
