@@ -2,11 +2,11 @@
   "name": "api",
   "version": "8.10.0",
   "description": "null",
-  "main": "index.js",
   "scripts": {
     "test": "test",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
+  "main":"server.js",
   "repository": {
     "type": "git",
     "url": "null"
