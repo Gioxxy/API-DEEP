@@ -10,9 +10,34 @@ var tools = require('./lib/tools');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+var accounts = [{
+					"username": "onesomeone@yandex.com",
+					"password": "onepassword"
+				},
+				{
+					"username": "buffiloffi@yandex.com",
+					"password": "onepassword"
+				},
+				{
+					"username": "lotomomoto@yandex.com",
+					"password": "onepassword"
+				},
+				{
+					"username": "abdulabi@yandex.com",
+					"password": "onepassword"
+				},
+				{
+					"username": "roachmama@yandex.com",
+					"password": "onepassword"
+				},
+				{
+					"username": "capacollo@yandex.com",
+					"password": "onepassword"
+				}];
 
 
-
+var account_index = Math.floor(Math.random() * 5) + 0;
+var account = accounts[account_index];
 
 
 /*ROUTER*/
@@ -22,7 +47,11 @@ var dwRouter = express.Router();
 dwRouter.get('/:id', function(req, res) {
 	var id = req.params.id;
 	//res.send('ciaooo ' + id);
-	tools.init("onesomeone@yandex.com", "onepassword",function(result){
+
+
+
+
+	tools.init(account.username, account.password,function(result){
 		//console.log("token " + res);
 		tools.getTrack(id,function(track){
 			/*return "url: " + tools.downloadUrl + " ciao";*/
