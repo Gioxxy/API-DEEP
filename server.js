@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
-var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
-var server_ip = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+var server_port = process.env.PORT || 3000;
+//var server_ip = process.env.app_host || "127.0.0.1";
 var bodyParser = require('body-parser');
 
 var tools = require('./lib/tools');
@@ -50,6 +50,6 @@ app.use('/downloadTrack', dwRouter);
 
 
 
-app.listen(server_port,server_ip,function(){
-	console.log('API running on ' + server_ip + 'port' + server_port);
+app.listen(server_port, function(){
+	console.log('API running on port' + server_port);
 });
